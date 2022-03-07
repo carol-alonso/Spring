@@ -29,7 +29,7 @@ public class ProdutoController {
 		private ProdutoRepository produtoRepository;
 		
 		
-		@GetMapping
+		@GetMapping("/all")
 		public ResponseEntity<List<Produto>> GetAll() {
 			return ResponseEntity.ok(produtoRepository.findAll());
 		}

@@ -55,6 +55,19 @@ public class Produto {
 	public void setPrecoProduto(String precoProduto) {
 		this.precoProduto = precoProduto;
 	}
+	
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+	
+	@ManyToOne
+	@JsonIgnoreProperties("postagem")
+	private Usuario usuario;
 
 	@ManyToOne
      @JsonIgnoreProperties("categoria")
